@@ -164,7 +164,8 @@ npm run dist
 
 MIT License
 
-# Build Resources
+##————————————————————————————————————
+## Build Resources
 
 此目录用于存放 electron-builder 打包资源。
 
