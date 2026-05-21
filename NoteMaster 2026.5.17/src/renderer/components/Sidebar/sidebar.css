@@ -1,0 +1,80 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar-title {
+  padding: 16px 20px 8px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-title h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1890ff;
+  letter-spacing: 1px;
+}
+
+.sidebar-actions {
+  padding: 12px 16px;
+}
+
+.sidebar-search {
+  padding: 0 16px 12px;
+}
+
+.sidebar-menu {
+  flex: 1;
+  overflow-y: auto;
+  border-right: none;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  color: #666;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.folder-item,
+.tag-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.folder-count,
+.tag-count {
+  font-size: 12px;
+  color: #999;
+  background: #f5f5f5;
+  padding: 0 6px;
+  border-radius: 10px;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* 暗色模式 */
+body[data-theme="dark"] .sidebar-title {
+  border-bottom-color: #303030;
+}
+
+body[data-theme="dark"] .sidebar-header {
+  color: #888;
+}
+
+body[data-theme="dark"] .folder-count,
+body[data-theme="dark"] .tag-count {
+  color: #888;
+  background: #2a2a2a;
+}

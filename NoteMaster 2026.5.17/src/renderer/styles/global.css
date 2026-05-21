@@ -1,0 +1,156 @@
+/* NoteMaster 全局样式 */
+
+/* 重置默认样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+/* 文本选择 */
+::selection {
+  background: #1890ff;
+  color: #fff;
+}
+
+/* 链接样式 */
+a {
+  color: #1890ff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #40a9ff;
+}
+
+/* 按钮焦点样式 */
+button:focus-visible {
+  outline: 2px solid #1890ff;
+  outline-offset: 2px;
+}
+
+/* 输入框样式 */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
+}
+
+input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #1890ff;
+  outline-offset: 1px;
+}
+
+/* Ant Design 覆盖 */
+.ant-layout {
+  background: #fff !important;
+}
+
+.ant-layout-sider {
+  background: #fff !important;
+}
+
+.ant-menu-inline {
+  border-right: none !important;
+}
+
+/* 拖拽分隔条 */
+.resize-handle {
+  width: 4px;
+  cursor: col-resize;
+  background: #f0f0f0;
+  transition: background 0.2s;
+}
+
+.resize-handle:hover {
+  background: #1890ff;
+}
+
+/* 加载动画 */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* 淡入动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* 暗色模式 */
+body[data-theme="dark"] {
+  color: #e0e0e0;
+  background: #141414;
+}
+
+body[data-theme="dark"] .ant-layout {
+  background: #141414 !important;
+}
+
+body[data-theme="dark"] .ant-layout-sider {
+  background: #1f1f1f !important;
+  border-right-color: #303030 !important;
+}
+
+body[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: #404040;
+}
+
+body[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

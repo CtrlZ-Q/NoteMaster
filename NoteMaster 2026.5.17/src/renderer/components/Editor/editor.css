@@ -1,0 +1,411 @@
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fafafa;
+}
+
+.editor-title-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 600;
+  background: transparent;
+  padding: 4px 0;
+  margin-right: 16px;
+}
+
+.editor-title-input::placeholder {
+  color: #bbb;
+}
+
+.save-status {
+  font-size: 12px;
+  color: #999;
+}
+
+/* 工具栏 */
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fafafa;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.toolbar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #555;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.toolbar-btn:hover {
+  background: #e6f7ff;
+  color: #1890ff;
+}
+
+.toolbar-text {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* 编辑器主体 */
+.editor-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.editor-body.editor-edit .editor-input-panel {
+  width: 100%;
+}
+
+.editor-body.editor-preview .editor-preview-panel {
+  width: 100%;
+}
+
+.editor-body.editor-split .editor-input-panel,
+.editor-body.editor-split .editor-preview-panel {
+  width: 50%;
+}
+
+.editor-input-panel {
+  border-right: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+
+.editor-preview-panel {
+  overflow-y: auto;
+}
+
+.editor-textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 20px;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+  background: #fff;
+  tab-size: 2;
+}
+
+.editor-textarea::placeholder {
+  color: #ccc;
+}
+
+/* AI面板 */
+.ai-panel,
+.grammar-panel {
+  border-top: 1px solid #f0f0f0;
+  background: #f9f9f9;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.ai-panel-header,
+.grammar-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-weight: 500;
+  background: #f0f5ff;
+}
+
+.ai-panel-content {
+  padding: 12px 16px;
+}
+
+.ai-panel-content h4 {
+  margin: 8px 0 4px;
+  color: #1890ff;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0;
+}
+
+.keyword-tag {
+  background: #e6f7ff;
+  color: #1890ff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.grammar-panel ul {
+  padding: 8px 16px;
+  margin: 0;
+}
+
+.grammar-panel li {
+  padding: 4px 0;
+  color: #fa8c16;
+  font-size: 13px;
+}
+
+/* Markdown预览样式 */
+.markdown-preview {
+  padding: 20px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.markdown-preview h1 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-top: 24px;
+}
+
+.markdown-preview h2 {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin-top: 20px;
+}
+
+.markdown-preview h3 {
+  margin-top: 16px;
+}
+
+.markdown-preview code {
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+}
+
+.markdown-preview pre {
+  background: #f6f8fa;
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 12px 0;
+}
+
+.markdown-preview pre code {
+  background: none;
+  padding: 0;
+}
+
+.markdown-preview blockquote {
+  border-left: 4px solid #1890ff;
+  margin: 12px 0;
+  padding: 8px 16px;
+  background: #f0f5ff;
+  color: #555;
+}
+
+.markdown-preview table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.markdown-preview th,
+.markdown-preview td {
+  border: 1px solid #e8e8e8;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.markdown-preview th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+.markdown-preview img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  padding-left: 24px;
+}
+
+.markdown-preview li {
+  margin: 4px 0;
+}
+
+.markdown-preview hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+.math-block {
+  margin: 12px 0;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.math-error {
+  color: #ff4d4f;
+  background: #fff2f0;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.empty-hint {
+  color: #999;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.render-error {
+  color: #ff4d4f;
+  text-align: center;
+}
+
+.hljs {
+  background: #f6f8fa !important;
+}
+
+/* 暗色模式 */
+body[data-theme="dark"] .editor-container {
+  background: #1f1f1f;
+}
+
+body[data-theme="dark"] .editor-header {
+  background: #1a1a1a;
+  border-bottom-color: #303030;
+}
+
+body[data-theme="dark"] .editor-title-input {
+  color: #e0e0e0;
+}
+
+body[data-theme="dark"] .editor-toolbar {
+  background: #1a1a1a;
+  border-bottom-color: #303030;
+}
+
+body[data-theme="dark"] .toolbar-btn {
+  color: #aaa;
+}
+
+body[data-theme="dark"] .toolbar-btn:hover {
+  background: #177ddc;
+  color: #fff;
+}
+
+body[data-theme="dark"] .editor-input-panel {
+  border-right-color: #303030;
+}
+
+body[data-theme="dark"] .editor-textarea {
+  color: #e0e0e0;
+  background: #1f1f1f;
+}
+
+body[data-theme="dark"] .ai-panel,
+body[data-theme="dark"] .grammar-panel {
+  background: #1a1a1a;
+  border-top-color: #303030;
+}
+
+body[data-theme="dark"] .ai-panel-header,
+body[data-theme="dark"] .grammar-panel-header {
+  background: #111d35;
+  border-bottom-color: #303030;
+}
+
+body[data-theme="dark"] .keyword-tag {
+  background: #111d35;
+  color: #177ddc;
+}
+
+body[data-theme="dark"] .markdown-preview {
+  color: #e0e0e0;
+}
+
+body[data-theme="dark"] .markdown-preview h1,
+body[data-theme="dark"] .markdown-preview h2 {
+  border-bottom-color: #303030;
+}
+
+body[data-theme="dark"] .markdown-preview code {
+  background: #2a2a2a;
+}
+
+body[data-theme="dark"] .markdown-preview pre {
+  background: #1a1a1a;
+}
+
+body[data-theme="dark"] .markdown-preview blockquote {
+  background: #111d35;
+  color: #aaa;
+}
+
+body[data-theme="dark"] .markdown-preview th,
+body[data-theme="dark"] .markdown-preview td {
+  border-color: #303030;
+}
+
+body[data-theme="dark"] .markdown-preview th {
+  background: #1a1a1a;
+}
+
+body[data-theme="dark"] .markdown-preview hr {
+  border-top-color: #303030;
+}
+
+body[data-theme="dark"] .hljs {
+  background: #1a1a1a !important;
+}
+
+body[data-theme="dark"] .save-status {
+  color: #888;
+}
+
+body[data-theme="dark"] .editor-title-input::placeholder {
+  color: #555;
+}
+
+body[data-theme="dark"] .editor-textarea::placeholder {
+  color: #555;
+}
+
+body[data-theme="dark"] .empty-hint {
+  color: #666;
+}
+
+body[data-theme="dark"] .grammar-panel li {
+  color: #faad14;
+}
