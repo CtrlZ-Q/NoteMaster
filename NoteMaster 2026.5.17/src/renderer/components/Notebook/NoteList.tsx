@@ -106,6 +106,7 @@ const NoteList: React.FC<NoteListProps> = ({
       } else {
         deleteNote(noteId)
           .then(() => {
+            removeNoteFromIndex(noteId);
             onDeleteNote(noteId);
             message.success('笔记已移到回收站');
           })

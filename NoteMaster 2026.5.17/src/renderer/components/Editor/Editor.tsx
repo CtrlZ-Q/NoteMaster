@@ -58,7 +58,7 @@ const Editor: React.FC<EditorProps> = ({ noteId, viewMode, onViewModeChange, onS
     const loadNote = async () => {
       try {
         // 切笔记前先保存当前未保存内容
-        if (isDirtyRef.current && noteRef.current) {
+        if (isDirtyRef.current && noteRef.current && !savingRef.current) {
           try {
             await updateNote(noteRef.current.id, { title: titleRef.current, content: contentRef.current });
           } catch (err) {
@@ -131,7 +131,7 @@ const Editor: React.FC<EditorProps> = ({ noteId, viewMode, onViewModeChange, onS
       if (autoSaveTimerRef.current) {
         clearTimeout(autoSaveTimerRef.current);
       }
-      if (isDirtyRef.current && noteRef.current) {
+      if (isDirtyRef.current && noteRef.current && !savingRef.current) {
         updateNote(noteRef.current.id, { title: titleRef.current, content: contentRef.current }).catch((err) => {
           console.error('卸载前保存失败:', err);
         });

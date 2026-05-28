@@ -22,7 +22,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
     "antd": "^5.12.8",
-    "better-sqlite3": "^9.4.3",
+    "better-sqlite3": "^9.6.0",
     "dompurify": "^3.0.8",
     "flexsearch": "^0.7.31",
     "highlight.js": "^11.9.0",
