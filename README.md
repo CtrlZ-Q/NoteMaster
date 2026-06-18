@@ -164,4 +164,4 @@ npm run dist
 
 ## 开源协议
 
-MIT License
+GPL-3.0 license
