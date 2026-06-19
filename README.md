@@ -118,7 +118,7 @@ sudo apt install -y python3 build-essential
 
 ```bash
 # 克隆项目
-git clone https://github.com/your-username/NoteMaster.git
+git clone https://github.com/CtrlZ-Q/NoteMaster.git
 cd NoteMaster
 
 # 安装依赖（这一步会编译 better-sqlite3 原生模块）
